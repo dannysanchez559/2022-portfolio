@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const NavWrapper = styled.div`
   box-sizing: border-box;
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,11 +10,10 @@ const NavWrapper = styled.div`
   height: 75px;
   padding-left: 50px;
   padding-right: 50px;
+  z-index: 1;
 `;
 
-const LeftNav = styled.div`
-  border: 1px solid green;
-`;
+const LeftNav = styled.div``;
 
 const RightNav = styled.div`
   width: 300px;
