@@ -20,6 +20,7 @@ const TopSectionWrapper = styled.div`
   margin: 10vh 0;
   font-family: "Oxygen", sans-serif;
   font-size: 1.2rem;
+  align-items: center;
 `;
 const TopPageLeft = styled.div`
   max-width: 35vw;
@@ -68,7 +69,7 @@ const TopPage = () => {
         </TopPageLeft>
 
         <TopPageRight>
-          <ProfilePic style={{ width: "18em", height: "18em" }} />
+          <ProfilePic style={{ width: "16em" }} />
         </TopPageRight>
       </TopSectionWrapper>
 
