@@ -17,7 +17,7 @@ const TopSectionWrapper = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   z-index: 1;
-  margin: 10vh 0;
+  margin: 7vh 0;
   font-family: "Oxygen", sans-serif;
   font-size: 1.2rem;
   align-items: center;
@@ -25,6 +25,9 @@ const TopSectionWrapper = styled.div`
 const TopPageLeft = styled.div`
   max-width: 35vw;
   max-height: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 const TopPageRight = styled.div`
   max-width: 35vw;
@@ -37,6 +40,7 @@ const TopPageRight = styled.div`
 const Header = styled.h1`
   font-size: 2.8rem;
   font-weight: 400;
+  margin: 0.2em 0;
 `;
 
 const NameHeader = styled(Header)`
