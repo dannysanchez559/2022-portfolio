@@ -15,6 +15,7 @@ const TriangleBackgroundWrapper = styled.div`
   position: absolute;
   top: 65vh;
   right: 0;
+  width: 90%;
 `;
 
 const Main = () => {
