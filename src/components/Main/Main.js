@@ -2,20 +2,23 @@ import React from "react";
 import Nav from "../Nav/Nav";
 import TopPage from "../TopPage/TopPage";
 import AboutMe from "../AboutMe/AboutMe";
+import Work from "../Work/Work";
 import styled from "styled-components";
-import { ReactComponent as TriangleBackground } from "../../img/triangleBackground.svg";
+import { ReactComponent as AboutMeBackground } from "../../img/aboutMeBackgroundSizeOne.svg";
 
 const MainWrapper = styled.div`
   background-color: #191919;
   color: #fffaf1;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  height: 400vh;
 `;
-const TriangleBackgroundWrapper = styled.div`
+
+const AboutMeBackgroundWrapper = styled.div`
   position: absolute;
-  top: 65vh;
+  top: 85vh;
   right: 0;
-  width: 90%;
 `;
 
 const Main = () => {
@@ -23,11 +26,12 @@ const Main = () => {
     <MainWrapper>
       <Nav />
       <TopPage />
-      <TriangleBackgroundWrapper style={{ zIndex: 0 }}>
-        <TriangleBackground style={{ maxWidth: "100%" }} />
-      </TriangleBackgroundWrapper>
-
+      {/* Background purple ribbon */}
+      <AboutMeBackgroundWrapper style={{ zIndex: 0 }}>
+        <AboutMeBackground style={{ width: "100vw" }} />
+      </AboutMeBackgroundWrapper>
       <AboutMe />
+      <Work />
     </MainWrapper>
   );
 };

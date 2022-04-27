@@ -7,10 +7,16 @@ const NavWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 75px;
+  height: 70px;
   padding-left: 50px;
   padding-right: 50px;
   z-index: 1;
+  border: 1px solid blue;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
 `;
 
 const LeftNav = styled.div``;

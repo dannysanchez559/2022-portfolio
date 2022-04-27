@@ -6,7 +6,8 @@ const TopPageWrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  border: 2px solid red;
   button {
     margin: 0 auto;
   }
