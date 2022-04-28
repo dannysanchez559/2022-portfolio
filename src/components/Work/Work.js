@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import workBackground from "../../img/axiom-pattern.png";
+import spoilistPic from "../../img/spoilist.svg";
+import quickRPic from "../../img/quickR.svg";
+import pocketDexPic from "../../img/pocketDex.svg";
+import movieAppPic from "../../img/movieApp.svg";
 
 const WorkWrapper = styled.div`
   display: flex;
@@ -48,6 +52,10 @@ const ProjectContainer = styled.div`
   border: 2px solid white;
   border-radius: 25px;
   margin-bottom: 5em;
+
+  img {
+    border-radius: 25px;
+  }
 `;
 
 const Work = () => {
@@ -57,10 +65,18 @@ const Work = () => {
         <h1>work.</h1>
       </WorkHeaderWrapper>
       <WorkProjectsWrapper>
-        <ProjectContainer>Project 1</ProjectContainer>
-        <ProjectContainer>Project 2</ProjectContainer>
-        <ProjectContainer>Project 3</ProjectContainer>
-        <ProjectContainer>Project 4</ProjectContainer>
+        <ProjectContainer>
+          <img src={spoilistPic} />
+        </ProjectContainer>
+        <ProjectContainer>
+          <img src={quickRPic} />
+        </ProjectContainer>
+        <ProjectContainer>
+          <img src={pocketDexPic} />
+        </ProjectContainer>
+        <ProjectContainer>
+          <img src={movieAppPic} />
+        </ProjectContainer>
       </WorkProjectsWrapper>
     </WorkWrapper>
   );
