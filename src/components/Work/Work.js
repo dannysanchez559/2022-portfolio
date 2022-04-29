@@ -44,7 +44,38 @@ const WorkProjectsWrapper = styled.div`
   margin: 0 5vw;
 `;
 
+const ProjectDescriptionOverlay = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 325px;
+  height: 175px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  opacity: 0;
+  color: white;
+  border-radius: 0 0 25px 25px;
+  transition: 0.25s ease-in;
+
+  h3 {
+    margin: 0;
+    font-size: 1.4em;
+    font-family: "Roboto", serif;
+  }
+
+  p {
+    margin: 10px;
+    font-family: "Raleway", serif;
+  }
+`;
+
 const ProjectContainer = styled.div`
+  position: relative;
   display: flex;
   box-sizing: border-box;
   width: 325px;
@@ -55,6 +86,15 @@ const ProjectContainer = styled.div`
 
   img {
     border-radius: 25px;
+    transition: 0.2s ease-in;
+  }
+
+  &:hover img {
+    opacity: 0.6;
+  }
+
+  &:hover ${ProjectDescriptionOverlay} {
+    opacity: 1;
   }
 `;
 
@@ -67,15 +107,44 @@ const Work = () => {
       <WorkProjectsWrapper>
         <ProjectContainer>
           <img src={spoilistPic} />
+          <ProjectDescriptionOverlay>
+            <h3>Spoilist</h3>
+            <p>
+              A native iOS application that helps prevent food spoilage. Add
+              alerts for food items to remind you to consume them before
+              spoilage!
+            </p>
+          </ProjectDescriptionOverlay>
         </ProjectContainer>
         <ProjectContainer>
           <img src={quickRPic} />
+          <ProjectDescriptionOverlay>
+            <h3>QuickR</h3>
+            <p>
+              A mobile application for both Android and iOS that allows you to
+              manage, organize, and create QR codes!
+            </p>
+          </ProjectDescriptionOverlay>
         </ProjectContainer>
         <ProjectContainer>
           <img src={pocketDexPic} />
+          <ProjectDescriptionOverlay>
+            <h3>PocketDex</h3>
+            <p>
+              A Mobile friendly Web based application that allows users to look
+              up any pokemon, and their stats.
+            </p>
+          </ProjectDescriptionOverlay>
         </ProjectContainer>
         <ProjectContainer>
           <img src={movieAppPic} />
+          <ProjectDescriptionOverlay>
+            <h3>Reactoads MovieApp</h3>
+            <p>
+              A Mobile friendly Web based application that allows users to look
+              up movie information!
+            </p>
+          </ProjectDescriptionOverlay>
         </ProjectContainer>
       </WorkProjectsWrapper>
     </WorkWrapper>
