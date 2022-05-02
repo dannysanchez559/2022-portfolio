@@ -62,6 +62,16 @@ const ProjectDescriptionOverlay = styled.div`
   border-radius: 0 0 25px 25px;
   transition: 0.25s ease-in;
 
+  a {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+  }
+
   h3 {
     margin: 0;
     font-size: 1.4em;
@@ -90,15 +100,22 @@ const ProjectContainer = styled.div`
   }
 
   &:hover img {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   &:hover ${ProjectDescriptionOverlay} {
     opacity: 1;
+    cursor: pointer;
   }
 `;
 
 const Work = () => {
+  let spoilistUrl = "https://butterysoft.github.io/SpoilistOfficialPage/";
+  let quickRUrl =
+    "https://www.figma.com/file/tEw5kXNStnUUHyHbNuItls/QR-Wallet?node-id=0%3A1";
+  let pocketDexUrl = "https://pocketdex-a45b8.web.app/";
+  let movieAppUrl = "https://reactoads-movie-app-7c45e.web.app/";
+
   return (
     <WorkWrapper>
       <WorkHeaderWrapper>
@@ -106,44 +123,52 @@ const Work = () => {
       </WorkHeaderWrapper>
       <WorkProjectsWrapper>
         <ProjectContainer>
-          <img src={spoilistPic} />
+          <img src={spoilistPic} alt="spoilist ios app" />
           <ProjectDescriptionOverlay>
-            <h3>Spoilist</h3>
-            <p>
-              A native iOS application that helps prevent food spoilage. Add
-              alerts for food items to remind you to consume them before
-              spoilage!
-            </p>
+            <a href={spoilistUrl} target="_blank" rel="noreferrer">
+              <h3>Spoilist</h3>
+              <p>
+                A native iOS application that helps prevent food spoilage. Add
+                alerts for food items to remind you to consume them before
+                spoilage!
+              </p>
+            </a>
           </ProjectDescriptionOverlay>
         </ProjectContainer>
         <ProjectContainer>
-          <img src={quickRPic} />
+          <img src={quickRPic} alt="quickR mobile app" />
           <ProjectDescriptionOverlay>
-            <h3>QuickR</h3>
-            <p>
-              A mobile application for both Android and iOS that allows you to
-              manage, organize, and create QR codes!
-            </p>
+            <a href={quickRUrl} target="_blank" rel="noreferrer">
+              <h3>QuickR</h3>
+              <p>
+                A mobile application for both Android and iOS that allows you to
+                manage, organize, and create QR codes!
+              </p>
+            </a>
           </ProjectDescriptionOverlay>
         </ProjectContainer>
         <ProjectContainer>
-          <img src={pocketDexPic} />
+          <img src={pocketDexPic} alt="pocketDex web app" />
           <ProjectDescriptionOverlay>
-            <h3>PocketDex</h3>
-            <p>
-              A Mobile friendly Web based application that allows users to look
-              up any pokemon, and their stats.
-            </p>
+            <a href={pocketDexUrl} target="_blank" rel="noreferrer">
+              <h3>PocketDex</h3>
+              <p>
+                A Mobile friendly Web based application that allows users to
+                look up any pokemon, and their stats.
+              </p>
+            </a>
           </ProjectDescriptionOverlay>
         </ProjectContainer>
         <ProjectContainer>
-          <img src={movieAppPic} />
+          <img src={movieAppPic} alt="Reactoads Movie web app" />
           <ProjectDescriptionOverlay>
-            <h3>Reactoads MovieApp</h3>
-            <p>
-              A Mobile friendly Web based application that allows users to look
-              up movie information!
-            </p>
+            <a href={movieAppUrl} target="_blank" rel="noreferrer">
+              <h3>Reactoads MovieApp</h3>
+              <p>
+                A Mobile friendly Web based application that allows users to
+                look up movie information!
+              </p>
+            </a>
           </ProjectDescriptionOverlay>
         </ProjectContainer>
       </WorkProjectsWrapper>
