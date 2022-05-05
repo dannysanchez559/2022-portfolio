@@ -4,6 +4,8 @@ import { ReactComponent as ProfilePic } from "../../img/profilePic.svg";
 
 const TopPageWrapper = styled.div`
   height: 100vh;
+  min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -3,6 +3,7 @@ import Nav from "../Nav/Nav";
 import TopPage from "../TopPage/TopPage";
 import AboutMe from "../AboutMe/AboutMe";
 import Work from "../Work/Work";
+import Contact from "../Contact/Contact";
 import styled from "styled-components";
 import { ReactComponent as AboutMeBackground } from "../../img/aboutMeBackgroundSizeOne.svg";
 
@@ -12,7 +13,7 @@ const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  height: 400vh;
+  height: auto;
 `;
 
 const AboutMeBackgroundWrapper = styled.div`
@@ -32,6 +33,7 @@ const Main = () => {
       </AboutMeBackgroundWrapper>
       <AboutMe />
       <Work />
+      <Contact />
     </MainWrapper>
   );
 };

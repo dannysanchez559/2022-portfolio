@@ -10,10 +10,11 @@ const WorkWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
   min-height: 100vh;
-  box-sizing: border-box;
+  box-sizing: content-box;
   padding: 0 5vw;
-  margin-top: 0vh;
+  margin: 0;
   background-image: url(${workBackground});
   background-repeat: repeat;
   border: 2px solid blue;
@@ -35,11 +36,13 @@ const WorkHeaderWrapper = styled.div`
 `;
 
 const WorkProjectsWrapper = styled.div`
-  border: 1px solid pink;
+  border: 2px solid pink;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-sizing: content-box;
+  height: auto;
   width: 100%;
   margin: 0 5vw;
 `;

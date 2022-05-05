@@ -4,9 +4,11 @@ import { default as AboutMePicture } from "../../img/aboutMePicture.svg";
 import style from "./style.js";
 
 const AboutMeWrapper = styled.div`
+  box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  min-height: 100vh;
   height: 100vh;
   z-index: 1;
   border: 2px solid pink;
