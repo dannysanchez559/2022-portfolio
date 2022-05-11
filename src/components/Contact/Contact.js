@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import style from "./style.js";
 import styled from "styled-components";
 import contactBackground from "../../img/contactBackground.svg";
+import emailjs from "@emailjs/browser";
 
 const ContactPageWrapper = styled.div`
   box-sizing: border-box;
@@ -10,7 +11,7 @@ const ContactPageWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   background: url(${contactBackground});
-  background-size: 80%;
+  background-size: 85%;
   background-position-y: 25%;
   background-repeat: no-repeat;
   padding: 0 5vw;
@@ -24,6 +25,7 @@ const ContactPageRightSideWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-self: center;
+  justify-content: flex-end;
   width: 45vw;
   height: 85vh;
   margin-top: 5vh;
@@ -35,7 +37,7 @@ const ContactPageHeaderWrapper = styled.div`
   border: 1px solid beige;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end;
   width: 100%;
   h1 {
     font-size: 3em;
@@ -49,10 +51,9 @@ const ContactFormWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border-radius: 3em;
-  margin: 0 auto;
+  border-radius: 2.5em;
   width: 40vw;
-  height: 65vh;
+  height: 68vh;
   background-color: rgba(0, 0, 0, 0.4);
   filter: drop-shadow(11px 6px 4px rgba(0, 0, 0, 0.25));
 
@@ -85,7 +86,39 @@ const ContactFormWrapper = styled.div`
     input:focus {
       outline: none;
     }
+
+    div {
+      border: 2px solid green;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
+    button {
+      align-self: flex-end;
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(110, 133, 178, 0.85);
+      border: none;
+      border-radius: 10px;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2em;
+      line-height: 28px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+    }
   }
+`;
+
+const EmailSentMessage = styled.div`
+  border: 1px solid pink;
+  visibility: hidden;
 `;
 
 const Contact = () => {
@@ -96,29 +129,67 @@ const Contact = () => {
           <h1>contact.</h1>
         </ContactPageHeaderWrapper>
         <ContactFormWrapper>
-          <form>
-            {/* <label for="name">name</label> */}
-            <input type="text" id="name" name="name" placeholder="name"></input>
-            <br />
-            {/* <label for="email">email</label> */}
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="email"
-            ></input>
-            <br />
-            {/* <label for="message">message</label> */}
-            <input
-              type="text"
-              id="message"
-              name="message"
-              placeholder="message"
-            ></input>
-          </form>
+          <ContactUs />
         </ContactFormWrapper>
       </ContactPageRightSideWrapper>
     </ContactPageWrapper>
+  );
+};
+
+// emailjs
+export const ContactUs = () => {
+  const form = useRef();
+  const messageSuccess = "Message successfully sent.";
+  const messageFailure = "Message unsuccessful, please try again.";
+  let [didMessageSend, setDidMessageSend] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // clear form
+    e.target.reset();
+
+    emailjs
+      .sendForm(
+        "service_tk9n8nw",
+        "contact_form",
+        form.current,
+        "-Lt-4qZkJVKMT9bk2"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log(messageSuccess);
+          setDidMessageSend(true);
+        },
+        (error) => {
+          console.log(error.text);
+          console.log(messageFailure);
+          setDidMessageSend(false);
+        }
+      );
+  };
+
+  return (
+    <form ref={form} onSubmit={sendEmail}>
+      <input type="text" name="user_name" placeholder="name" />
+      <input type="email" name="user_email" placeholder="email" />
+      <input name="message" placeholder="message" />
+      <div>
+        {didMessageSend ? (
+          <EmailSentMessage style={{ visibility: "visible" }}>
+            {messageSuccess}
+          </EmailSentMessage>
+        ) : (
+          <EmailSentMessage style={{ visibility: "hidden" }}>
+            {messageFailure}
+          </EmailSentMessage>
+        )}
+        <button type="submit" value="Send">
+          submit
+        </button>
+      </div>
+    </form>
   );
 };
 
