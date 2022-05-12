@@ -10,18 +10,17 @@ const WorkWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
   min-height: 100vh;
-  box-sizing: border-box;
+  box-sizing: content-box;
   padding: 0 5vw;
-  margin-top: 0vh;
+  margin: 0;
   background-image: url(${workBackground});
   background-repeat: repeat;
-  border: 2px solid blue;
 `;
 
 const WorkHeaderWrapper = styled.div`
   height: 15vh;
-  border: 1px solid beige;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -35,11 +34,12 @@ const WorkHeaderWrapper = styled.div`
 `;
 
 const WorkProjectsWrapper = styled.div`
-  border: 1px solid pink;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-sizing: content-box;
+  height: auto;
   width: 100%;
   margin: 0 5vw;
 `;
@@ -90,7 +90,6 @@ const ProjectContainer = styled.div`
   box-sizing: border-box;
   width: 325px;
   height: 250px;
-  border: 2px solid white;
   border-radius: 25px;
   margin-bottom: 5em;
 
