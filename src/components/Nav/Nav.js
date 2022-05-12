@@ -11,7 +11,6 @@ const NavWrapper = styled.div`
   padding-left: 50px;
   padding-right: 50px;
   z-index: 1;
-  border: 1px solid blue;
   position: fixed;
   top: 0;
   width: 100vw;

@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 const ContactPageWrapper = styled.div`
   box-sizing: border-box;
   display: flex;
-  border: 2px solid saddlebrown;
   width: 100%;
   min-height: 100vh;
   background: url(${contactBackground});
@@ -29,12 +28,10 @@ const ContactPageRightSideWrapper = styled.div`
   width: 45vw;
   height: 85vh;
   margin-top: 5vh;
-  border: 2px solid green;
 `;
 
 const ContactPageHeaderWrapper = styled.div`
   height: 15vh;
-  border: 1px solid beige;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -47,7 +44,6 @@ const ContactPageHeaderWrapper = styled.div`
 `;
 
 const ContactFormWrapper = styled.div`
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -88,7 +84,6 @@ const ContactFormWrapper = styled.div`
     }
 
     div {
-      border: 2px solid green;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -117,7 +112,6 @@ const ContactFormWrapper = styled.div`
 `;
 
 const EmailSentMessage = styled.div`
-  border: 1px solid pink;
   visibility: hidden;
 `;
 

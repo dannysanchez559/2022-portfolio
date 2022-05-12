@@ -11,7 +11,6 @@ const AboutMeWrapper = styled.div`
   min-height: 100vh;
   height: 100vh;
   z-index: 1;
-  border: 2px solid pink;
 `;
 
 const LeftSideWrapper = styled.div`
