@@ -1,4 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import style from "./style.js";
 import styled from "styled-components";
 import contactBackground from "../../img/contactBackground.svg";
@@ -120,16 +122,45 @@ const EmailSentMessage = styled.div`
   visibility: hidden;
 `;
 
+const contactFormAnimation = {
+  hidden: { opacity: 0 },
+  visible: {
+    x: [300, 0],
+    opacity: 1,
+  },
+};
+
 const Contact = () => {
+  // in view animation
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
     <ContactPageWrapper id="contact">
       <ContactPageRightSideWrapper>
         <ContactPageHeaderWrapper>
           <h1>contact.</h1>
         </ContactPageHeaderWrapper>
-        <ContactFormWrapper>
-          <ContactUs />
-        </ContactFormWrapper>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={contactFormAnimation}
+          transition={{ duration: 1.25 }}
+        >
+          <ContactFormWrapper>
+            <ContactUs />
+          </ContactFormWrapper>
+        </motion.div>
       </ContactPageRightSideWrapper>
     </ContactPageWrapper>
   );

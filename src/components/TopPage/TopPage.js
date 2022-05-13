@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { ReactComponent as ProfilePic } from "../../img/profilePic.svg";
+import { motion } from "framer-motion";
 
 const TopPageWrapper = styled.div`
   height: 100vh;
@@ -10,6 +11,7 @@ const TopPageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   button {
     margin: 0 auto;
     align-self: center;
@@ -32,6 +34,7 @@ const TopPageLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-right: 7vw;
 `;
 const TopPageRight = styled.div`
   max-width: 35vw;
@@ -39,6 +42,7 @@ const TopPageRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: top;
+  margin-left: 7vw;
 `;
 
 const Header = styled.h1`
@@ -71,35 +75,92 @@ const LearnMoreBtn = styled.button`
   }
 `;
 
+const profilePicAnimate = {
+  visible: { opacity: 1, transition: { duration: 2 } },
+  hidden: { opacity: 0 },
+};
+
+const topLeftAnimate = {
+  hidden: { opacity: 0.3 },
+  visible: {
+    x: [-600, 0],
+    opacity: 1,
+  },
+};
+
+const buttonAnimate = {
+  hidden: { opacity: 0 },
+  visible: {
+    y: [250, 0],
+    opacity: 1,
+  },
+};
+
 const TopPage = () => {
   return (
     <TopPageWrapper id="top">
       <TopSectionWrapper>
         <TopPageLeft>
-          <p>Hello, my name is </p>
-          <NameHeader>Daniel Sanchez.</NameHeader>
-          <Header>I create things for the Web.</Header>
+          <motion.div
+            initial="hidden"
+            variants={topLeftAnimate}
+            animate={"visible"}
+            transition={{ duration: 0.75, delay: 1.5 }}
+          >
+            <p>Hello, my name is </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            variants={topLeftAnimate}
+            animate={"visible"}
+            transition={{ duration: 1.5, delay: 1.5 }}
+          >
+            <NameHeader>Daniel Sanchez.</NameHeader>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            variants={topLeftAnimate}
+            animate={"visible"}
+            transition={{ duration: 2, delay: 1.5 }}
+          >
+            <Header>I create things for the Web.</Header>
+          </motion.div>
         </TopPageLeft>
 
-        <TopPageRight>
-          <ProfilePic style={{ width: "16em" }} />
-        </TopPageRight>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={profilePicAnimate}
+        >
+          <TopPageRight>
+            <ProfilePic style={{ width: "16em" }} />
+          </TopPageRight>
+        </motion.div>
       </TopSectionWrapper>
 
-      <LearnMoreBtn>
-        <Link
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={400}
-          style={{
-            padding: "10px 42px",
-            cursor: "pointer",
-          }}
-        >
-          Learn More
-        </Link>
-      </LearnMoreBtn>
+      <motion.div
+        initial="hidden"
+        variants={buttonAnimate}
+        animate={"visible"}
+        transition={{ duration: 1.2, delay: 3.5 }}
+      >
+        <LearnMoreBtn>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={400}
+            style={{
+              padding: "10px 42px",
+              cursor: "pointer",
+            }}
+          >
+            Learn More
+          </Link>
+        </LearnMoreBtn>
+      </motion.div>
     </TopPageWrapper>
   );
 };
