@@ -108,6 +108,11 @@ const ContactFormWrapper = styled.div`
       align-items: center;
       color: #ffffff;
     }
+
+    button:hover {
+      background-color: rgba(90, 113, 158, 0.8);
+      cursor: pointer;
+    }
   }
 `;
 
@@ -117,7 +122,7 @@ const EmailSentMessage = styled.div`
 
 const Contact = () => {
   return (
-    <ContactPageWrapper>
+    <ContactPageWrapper id="contact">
       <ContactPageRightSideWrapper>
         <ContactPageHeaderWrapper>
           <h1>contact.</h1>

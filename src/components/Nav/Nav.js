@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const NavWrapper = styled.div`
@@ -15,7 +16,10 @@ const NavWrapper = styled.div`
   top: 0;
   width: 100vw;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.6);
+
+  a:hover {
+    color: rgba(90, 113, 158, 1);
+  }
 `;
 
 const LeftNav = styled.div``;
@@ -29,15 +33,66 @@ const RightNav = styled.div`
 `;
 
 const Nav = () => {
+  const [opaqueNav, setOpaqueNav] = useState("rgba(0,0,0,0)");
+
+  useEffect(() => {
+    window.addEventListener("scroll", navBarScrollEffect);
+
+    return () => {
+      window.removeEventListener("scroll", navBarScrollEffect);
+    };
+  }, []);
+
+  const navBarScrollEffect = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 100
+        ? setOpaqueNav("rgba(0, 0, 0, 0.8)")
+        : setOpaqueNav("rgba(0,0,0,0)");
+    }
+  };
+
   return (
-    <NavWrapper>
+    <NavWrapper style={{ backgroundColor: `${opaqueNav}` }}>
       <LeftNav>
-        <a>Daniel S.</a>
+        <Link
+          to="top"
+          spy={true}
+          smooth={true}
+          duration={400}
+          style={{ cursor: "pointer" }}
+        >
+          <a> Daniel S.</a>
+        </Link>
       </LeftNav>
       <RightNav>
-        <a>about</a>
-        <a>work</a>
-        <a>contact</a>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          duration={400}
+          style={{ cursor: "pointer" }}
+        >
+          about
+        </Link>
+        <Link
+          to="work"
+          spy={true}
+          smooth={true}
+          duration={400}
+          style={{ cursor: "pointer" }}
+        >
+          work
+        </Link>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={400}
+          style={{ cursor: "pointer" }}
+        >
+          contact
+        </Link>
       </RightNav>
     </NavWrapper>
   );

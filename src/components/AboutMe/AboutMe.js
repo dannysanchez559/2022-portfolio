@@ -67,7 +67,7 @@ const AboutContentWrapper = styled.div`
 
 const AboutMe = () => {
   return (
-    <AboutMeWrapper>
+    <AboutMeWrapper id="about">
       <LeftSideWrapper>
         <img src={AboutMePicture} />
       </LeftSideWrapper>
