@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import { ReactComponent as ProfilePic } from "../../img/profilePic.svg";
 
 const TopPageWrapper = styled.div`
@@ -11,6 +12,7 @@ const TopPageWrapper = styled.div`
   justify-content: center;
   button {
     margin: 0 auto;
+    align-self: center;
   }
 `;
 
@@ -62,11 +64,16 @@ const LearnMoreBtn = styled.button`
   border-radius: 10px;
   border: none;
   text-decoration: none;
+
+  :hover {
+    cursor: pointer;
+    background-color: rgba(90, 113, 158, 0.8);
+  }
 `;
 
 const TopPage = () => {
   return (
-    <TopPageWrapper>
+    <TopPageWrapper id="top">
       <TopSectionWrapper>
         <TopPageLeft>
           <p>Hello, my name is </p>
@@ -79,7 +86,20 @@ const TopPage = () => {
         </TopPageRight>
       </TopSectionWrapper>
 
-      <LearnMoreBtn>Learn More</LearnMoreBtn>
+      <LearnMoreBtn>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          duration={400}
+          style={{
+            padding: "10px 42px",
+            cursor: "pointer",
+          }}
+        >
+          Learn More
+        </Link>
+      </LearnMoreBtn>
     </TopPageWrapper>
   );
 };

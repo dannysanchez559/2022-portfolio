@@ -116,7 +116,7 @@ const Work = () => {
   let movieAppUrl = "https://reactoads-movie-app-7c45e.web.app/";
 
   return (
-    <WorkWrapper>
+    <WorkWrapper id="work">
       <WorkHeaderWrapper>
         <h1>work.</h1>
       </WorkHeaderWrapper>
