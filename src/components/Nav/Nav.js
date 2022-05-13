@@ -20,6 +20,13 @@ const NavWrapper = styled.div`
   a:hover {
     color: rgba(90, 113, 158, 1);
   }
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-evenly;
+  }
 `;
 
 const LeftNav = styled.div``;
@@ -30,6 +37,15 @@ const RightNav = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    width: auto;
+    justify-content: space-evenly;
+    a {
+      margin: 0 15px;
+    }
+  }
 `;
 
 const Nav = () => {

@@ -16,6 +16,11 @@ const ContactPageWrapper = styled.div`
   background-position-y: 25%;
   background-repeat: no-repeat;
   padding: 0 5vw;
+
+  // small devices (tablets, 350px and up)
+  @media (min-width: 350px) {
+    background: none;
+  }
 `;
 
 const ContactPageRightSideWrapper = styled.div`
@@ -30,6 +35,13 @@ const ContactPageRightSideWrapper = styled.div`
   width: 45vw;
   height: 85vh;
   margin-top: 5vh;
+
+  // small devices (tablets, 350px and up)
+  @media (min-width: 350px) {
+    justify-content: center;
+    width: 90%;
+    height: 75vh;
+  }
 `;
 
 const ContactPageHeaderWrapper = styled.div`
@@ -42,6 +54,35 @@ const ContactPageHeaderWrapper = styled.div`
     font-size: 3em;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+  }
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    h1 {
+      font-size: 3.5em;
+    }
+  }
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    height: 7vh;
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    height: 7vh;
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  // small devices (tablets, 350px and up)
+  @media (min-width: 350px) {
+    justify-content: center;
+    h1 {
+      font-size: 2em;
+    }
   }
 `;
 
@@ -115,6 +156,42 @@ const ContactFormWrapper = styled.div`
       background-color: rgba(90, 113, 158, 0.8);
       cursor: pointer;
     }
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    height: 60vh;
+    form {
+      padding: 0;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    width: 45vw;
+    height: 45vw;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    width: 45vw;
+    height: 45vw;
+    form {
+      padding: 0px;
+      input {
+        margin: 0;
+      }
+      button {
+        margin-top: 0;
+        height: 40px;
+      }
+    }
+  }
+
+  // small devices (tablets, 350px and up)
+  @media (min-width: 350px) {
+    width: 100%;
+    height: auto;
   }
 `;
 

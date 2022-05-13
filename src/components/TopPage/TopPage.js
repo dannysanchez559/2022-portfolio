@@ -16,6 +16,11 @@ const TopPageWrapper = styled.div`
     margin: 0 auto;
     align-self: center;
   }
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    margin-top: 5vh;
+  }
 `;
 
 const TopSectionWrapper = styled.div`
@@ -27,28 +32,116 @@ const TopSectionWrapper = styled.div`
   font-family: "Oxygen", sans-serif;
   font-size: 1.2rem;
   align-items: center;
+
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    font-size: 1.6rem;
+    margin: 15vh 0;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    margin-bottom: 10vh;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin-bottom: 12vh;
+  }
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    height: 80vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    z-index: 1;
+    margin: 7vh 0;
+    font-family: "Oxygen", sans-serif;
+    font-size: 1.2rem;
+    align-items: center;
+  }
 `;
 const TopPageLeft = styled.div`
-  max-width: 35vw;
+  max-width: 40vw;
   max-height: 30vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-right: 7vw;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin-right: 4vw;
+  }
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    max-width: 100%;
+    max-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+  }
 `;
 const TopPageRight = styled.div`
   max-width: 35vw;
   max-height: 30vw;
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-self: center;
   margin-left: 7vw;
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    height: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    height: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4vw;
+  }
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    max-width: 40vw;
+    max-height: 40vw;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    margin: 5vh auto;
+  }
 `;
 
 const Header = styled.h1`
   font-size: 2.8rem;
   font-weight: 400;
   margin: 0.2em 0;
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    font-size: 2.2em;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: 1.8em;
+  }
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    font-size: 2.3rem;
+  }
 `;
 
 const NameHeader = styled(Header)`
@@ -56,6 +149,21 @@ const NameHeader = styled(Header)`
   font-weight: bolder;
   font-family: "Roboto", sans-serif;
   font-size: 2.9em;
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    font-size: 2.5em;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: 2em;
+  }
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    font-size: 2.1em;
+  }
 `;
 
 const LearnMoreBtn = styled.button`
@@ -72,6 +180,11 @@ const LearnMoreBtn = styled.button`
   :hover {
     cursor: pointer;
     background-color: rgba(90, 113, 158, 0.8);
+  }
+
+  // Small devices (landscape phones, 350px and up)
+  @media (min-width: 350px) {
+    visibility: hidden;
   }
 `;
 
@@ -135,7 +248,7 @@ const TopPage = () => {
           variants={profilePicAnimate}
         >
           <TopPageRight>
-            <ProfilePic style={{ width: "16em" }} />
+            <ProfilePic style={{ minWidth: "6em", width: "16em" }} />
           </TopPageRight>
         </motion.div>
       </TopSectionWrapper>
