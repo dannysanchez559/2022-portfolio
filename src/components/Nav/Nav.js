@@ -22,7 +22,7 @@ const NavWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     padding-left: 20px;
     padding-right: 20px;
     justify-content: space-evenly;
@@ -39,7 +39,7 @@ const RightNav = styled.div`
   justify-content: space-between;
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     width: auto;
     justify-content: space-evenly;
     a {

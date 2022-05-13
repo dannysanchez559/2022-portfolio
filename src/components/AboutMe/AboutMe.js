@@ -15,7 +15,7 @@ const AboutMeWrapper = styled.div`
   z-index: 1;
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     flex-direction: column-reverse;
   }
 `;
@@ -37,28 +37,28 @@ const LeftSideWrapper = styled.div`
   }
 
   // X-Large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
+  @media (max-width: 1400px) {
     img {
       width: 27em;
     }
   }
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     img {
       width: 23em;
     }
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     img {
       width: 18em;
     }
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     height: auto;
     width: 80%;
     display: flex;
@@ -93,24 +93,19 @@ const RightSideWrapper = styled.div`
     height: 70vh;
   }
 
-  // X-Large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
-    height: 60vh;
-  }
-
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     height: 55vh;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     width: 45vw;
     height: 55vh;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     width: 90%;
     height: auto;
     flex-direction: column;
@@ -140,7 +135,7 @@ const AboutHeaderWrapper = styled.div`
   }
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     height: 7vh;
     h1 {
       font-size: 2.5em;
@@ -148,7 +143,7 @@ const AboutHeaderWrapper = styled.div`
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     height: 4vh;
     h1 {
       font-size: 2em;
@@ -156,7 +151,7 @@ const AboutHeaderWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     text-align: center;
     height: 10vh;
     justify-content: center;
@@ -184,28 +179,28 @@ const AboutContentWrapper = styled.div`
     }
   }
   // X-Large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
+  @media (max-width: 1400px) {
     p {
       font-size: 1.4rem;
     }
   }
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     p {
       font-size: 1.3rem;
     }
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     p {
       font-size: 1.1em;
     }
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     max-width: 100%;
     p {
       font-size: 1.3rem;

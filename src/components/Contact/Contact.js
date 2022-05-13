@@ -18,7 +18,7 @@ const ContactPageWrapper = styled.div`
   padding: 0 5vw;
 
   // small devices (tablets, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     background: none;
   }
 `;
@@ -37,7 +37,7 @@ const ContactPageRightSideWrapper = styled.div`
   margin-top: 5vh;
 
   // small devices (tablets, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     justify-content: center;
     width: 90%;
     height: 75vh;
@@ -62,7 +62,7 @@ const ContactPageHeaderWrapper = styled.div`
     }
   }
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     height: 7vh;
     h1 {
       font-size: 2.5em;
@@ -70,7 +70,7 @@ const ContactPageHeaderWrapper = styled.div`
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     height: 7vh;
     h1 {
       font-size: 2em;
@@ -78,7 +78,7 @@ const ContactPageHeaderWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     justify-content: center;
     h1 {
       font-size: 2em;
@@ -159,7 +159,7 @@ const ContactFormWrapper = styled.div`
   }
 
   // X-Large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
+  @media (max-width: 1400px) {
     height: 60vh;
     form {
       padding: 0;
@@ -167,13 +167,13 @@ const ContactFormWrapper = styled.div`
   }
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     width: 45vw;
     height: 45vw;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     width: 45vw;
     height: 45vw;
     form {
@@ -189,7 +189,7 @@ const ContactFormWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     width: 100%;
     height: auto;
   }

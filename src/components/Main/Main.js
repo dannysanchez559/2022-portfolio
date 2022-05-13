@@ -34,7 +34,7 @@ const AboutMeBackgroundWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     background: none;
   }
 `;

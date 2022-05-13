@@ -18,7 +18,7 @@ const TopPageWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     margin-top: 5vh;
   }
 `;
@@ -40,17 +40,17 @@ const TopSectionWrapper = styled.div`
   }
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     margin-bottom: 10vh;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     margin-bottom: 12vh;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     height: 80vh;
     width: 80%;
     display: flex;
@@ -70,14 +70,14 @@ const TopPageLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 7vw;
+  margin-right: 5vw;
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     margin-right: 4vw;
   }
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     max-width: 100%;
     max-height: 60vh;
     flex-direction: column;
@@ -92,10 +92,10 @@ const TopPageRight = styled.div`
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-left: 7vw;
+  margin-left: 5vw;
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     height: auto;
     padding-top: 0;
     display: flex;
@@ -104,7 +104,7 @@ const TopPageRight = styled.div`
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     height: auto;
     padding-top: 0;
     display: flex;
@@ -114,7 +114,7 @@ const TopPageRight = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     max-width: 40vw;
     max-height: 40vw;
     justify-content: flex-start;
@@ -130,16 +130,16 @@ const Header = styled.h1`
   margin: 0.2em 0;
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     font-size: 2.2em;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 1.8em;
   }
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     font-size: 2.3rem;
   }
 `;
@@ -151,17 +151,17 @@ const NameHeader = styled(Header)`
   font-size: 2.9em;
 
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (max-width: 1200px) {
     font-size: 2.5em;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 2em;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     font-size: 2.1em;
   }
 `;
@@ -183,7 +183,7 @@ const LearnMoreBtn = styled.button`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (min-width: 350px) {
+  @media (max-width: 576px) {
     visibility: hidden;
   }
 `;
