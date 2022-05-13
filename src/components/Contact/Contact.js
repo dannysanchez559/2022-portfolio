@@ -253,9 +253,6 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // clear form
-    e.target.reset();
-
     emailjs
       .sendForm(
         "service_tk9n8nw",
@@ -275,6 +272,9 @@ export const ContactUs = () => {
           setDidMessageSend(false);
         }
       );
+
+    // clear form
+    e.target.reset();
   };
 
   return (
