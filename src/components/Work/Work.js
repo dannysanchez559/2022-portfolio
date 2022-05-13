@@ -33,6 +33,38 @@ const WorkHeaderWrapper = styled.div`
     font-family: "Roboto", sans-serif;
     font-weight: 400;
   }
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    h1 {
+      font-size: 3.5em;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 992px) {
+    margin: 7vh 5vw;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  // small devices
+  @media (max-width: 576px) {
+    height: 5vh;
+    justify-content: center;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
 `;
 
 const WorkProjectsWrapper = styled.div`
@@ -44,6 +76,21 @@ const WorkProjectsWrapper = styled.div`
   height: auto;
   width: 100%;
   margin: 0 5vw;
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 1200px) {
+    justify-content: space-evenly;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 992px) {
+    justify-content: space-evenly;
+  }
+
+  // small devices (tablets, 350px and up)
+  @media (max-width: 576px) {
+    justify-content: space-evenly;
+  }
 `;
 
 const ProjectDescriptionOverlay = styled.div`
@@ -84,6 +131,12 @@ const ProjectDescriptionOverlay = styled.div`
     margin: 10px;
     font-family: "Raleway", serif;
   }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 992px) {
+    width: 300px;
+    height: 160px;
+  }
 `;
 
 const ProjectContainer = styled.div`
@@ -107,6 +160,12 @@ const ProjectContainer = styled.div`
   &:hover ${ProjectDescriptionOverlay} {
     opacity: 1;
     cursor: pointer;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 992px) {
+    width: 300px;
+    height: 225px;
   }
 `;
 
