@@ -14,6 +14,7 @@ const MainWrapper = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   height: auto;
+  overflow-x: hidden;
 `;
 
 const AboutMeBackgroundWrapper = styled.div`
@@ -25,7 +26,6 @@ const AboutMeBackgroundWrapper = styled.div`
   background-size: cover;
   width: 100%;
   height: 125vh;
-  z-index: 0;
 
   // XX-Large devices (larger desktops, 1400px and up)
   @media (min-width: 1400px) {

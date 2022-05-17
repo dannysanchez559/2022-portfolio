@@ -176,6 +176,7 @@ const LearnMoreBtn = styled.button`
   border-radius: 10px;
   border: none;
   text-decoration: none;
+  z-index: 100;
 
   :hover {
     cursor: pointer;
@@ -253,27 +254,25 @@ const TopPage = () => {
         </motion.div>
       </TopSectionWrapper>
 
-      <motion.div
-        initial="hidden"
-        variants={buttonAnimate}
-        animate={"visible"}
-        transition={{ duration: 1.2, delay: 3.5 }}
+      <Link
+        to="about"
+        spy={true}
+        smooth={true}
+        duration={400}
+        style={{
+          padding: "10px 42px",
+          zIndex: 100,
+        }}
       >
-        <LearnMoreBtn>
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={400}
-            style={{
-              padding: "10px 42px",
-              cursor: "pointer",
-            }}
-          >
-            Learn More
-          </Link>
-        </LearnMoreBtn>
-      </motion.div>
+        <motion.div
+          initial="hidden"
+          variants={buttonAnimate}
+          animate={"visible"}
+          transition={{ duration: 1.2, delay: 3.5 }}
+        >
+          <LearnMoreBtn>Learn More</LearnMoreBtn>
+        </motion.div>
+      </Link>
     </TopPageWrapper>
   );
 };

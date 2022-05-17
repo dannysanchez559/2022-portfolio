@@ -35,6 +35,7 @@ const ContactPageRightSideWrapper = styled.div`
   width: 45vw;
   height: 85vh;
   margin-top: 5vh;
+  overflow-x: hidden;
 
   // small devices (tablets, 350px and up)
   @media (max-width: 576px) {
@@ -243,15 +244,39 @@ const Contact = () => {
   );
 };
 
+const SubmitFormButton = () => {
+  return (
+    <button type="submit" value="Send">
+      submit
+    </button>
+  );
+};
+
 // emailjs
 export const ContactUs = () => {
   const form = useRef();
   const messageSuccess = "Message successfully sent.";
   const messageFailure = "Message unsuccessful, please try again.";
-  let [didMessageSend, setDidMessageSend] = useState(false);
+  let [contactFormCompletionMessage, setContactFormCompletionMessage] =
+    useState("");
+  let [userAttemptedFormSend, setUserAttemptedFormSend] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setUserAttemptedFormSend(true);
+
+    console.log(e.target[0].value);
+    let field = e.target;
+
+    let formName = field[0].value;
+    let formEmail = field[1].value;
+    let formMessage = field[2].value;
+
+    // form validation for empty fields
+    if (formName === "" || formEmail === "" || formMessage === "") {
+      setContactFormCompletionMessage(messageFailure);
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -264,17 +289,21 @@ export const ContactUs = () => {
         (result) => {
           console.log(result.text);
           console.log(messageSuccess);
-          setDidMessageSend(true);
+          setContactFormCompletionMessage(messageSuccess);
         },
         (error) => {
           console.log(error.text);
           console.log(messageFailure);
-          setDidMessageSend(false);
+          setContactFormCompletionMessage(messageFailure);
         }
       );
 
     // clear form
     e.target.reset();
+    // hide messageCompletion
+    setTimeout(() => {
+      setUserAttemptedFormSend(false);
+    }, 5000);
   };
 
   return (
@@ -283,18 +312,17 @@ export const ContactUs = () => {
       <input type="email" name="user_email" placeholder="email" />
       <input name="message" placeholder="message" />
       <div>
-        {didMessageSend ? (
-          <EmailSentMessage style={{ visibility: "visible" }}>
-            {messageSuccess}
-          </EmailSentMessage>
-        ) : (
-          <EmailSentMessage style={{ visibility: "hidden" }}>
-            {messageFailure}
-          </EmailSentMessage>
-        )}
-        <button type="submit" value="Send">
-          submit
-        </button>
+        <EmailSentMessage
+          style={
+            userAttemptedFormSend
+              ? { visibility: "visible" }
+              : { visibility: "hidden" }
+          }
+        >
+          {contactFormCompletionMessage}
+        </EmailSentMessage>
+
+        <SubmitFormButton />
       </div>
     </form>
   );
