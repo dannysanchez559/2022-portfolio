@@ -27,14 +27,14 @@ const AboutMeBackgroundWrapper = styled.div`
   width: 100%;
   height: 125vh;
 
-  // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  // Desktops
+  @media (max-width: 1920px) {
     top: 70vh;
     height: 130vh;
   }
 
-  // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  // Tablets
+  @media (max-width: 900px) {
     background: none;
   }
 `;

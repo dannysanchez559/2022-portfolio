@@ -15,7 +15,7 @@ const AboutMeWrapper = styled.div`
   z-index: 1;
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     flex-direction: column-reverse;
   }
 `;
@@ -30,35 +30,28 @@ const LeftSideWrapper = styled.div`
   }
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  @media (max-width: 1920px) {
     img {
       width: 37em;
     }
   }
 
-  // X-Large devices (large desktops, 1200px and up)
-  @media (max-width: 1400px) {
-    img {
-      width: 27em;
-    }
-  }
-
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     img {
-      width: 23em;
+      width: 26em;
     }
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     img {
-      width: 18em;
+      width: 20em;
     }
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     height: auto;
     width: 80%;
     display: flex;
@@ -88,24 +81,24 @@ const RightSideWrapper = styled.div`
   padding: 30px;
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  @media (max-width: 1920px) {
     width: 35vw;
     height: 70vh;
   }
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     height: 55vh;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     width: 45vw;
-    height: 55vh;
+    height: 35vh;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     width: 90%;
     height: auto;
     flex-direction: column;
@@ -128,14 +121,14 @@ const AboutHeaderWrapper = styled.div`
   }
 
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  @media (max-width: 1920px) {
     h1 {
       font-size: 3.5em;
     }
   }
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     height: 7vh;
     h1 {
       font-size: 2.5em;
@@ -143,7 +136,7 @@ const AboutHeaderWrapper = styled.div`
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     height: 4vh;
     h1 {
       font-size: 2em;
@@ -151,7 +144,7 @@ const AboutHeaderWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     text-align: center;
     height: 10vh;
     justify-content: center;
@@ -171,36 +164,31 @@ const AboutContentWrapper = styled.div`
     line-height: 125%;
     font-weight: 400;
   }
+
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  @media (max-width: 1920px) {
     p {
       font-size: 1.8rem;
       margin-top: 50px;
     }
   }
+
   // X-Large devices (large desktops, 1200px and up)
-  @media (max-width: 1400px) {
+  @media (max-width: 1280px) {
     p {
       font-size: 1.4rem;
     }
   }
 
-  // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
-    p {
-      font-size: 1.3rem;
-    }
-  }
-
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     p {
       font-size: 1.1em;
     }
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     max-width: 100%;
     p {
       font-size: 1.3rem;

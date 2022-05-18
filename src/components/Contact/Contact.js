@@ -18,8 +18,15 @@ const ContactPageWrapper = styled.div`
   padding: 0 5vw;
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     background: none;
+  }
+
+  // tablet
+  // small devices (tablets, 350px and up)
+  @media (max-width: 900px) {
+    background-size: 100%;
+    background-position-x: -3vw;
   }
 `;
 
@@ -38,10 +45,18 @@ const ContactPageRightSideWrapper = styled.div`
   overflow-x: hidden;
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     justify-content: center;
     width: 90%;
     height: 75vh;
+  }
+
+  // tablet
+  // small devices (tablets, 350px and up)
+  @media (max-width: 900px) {
+    width: 50%;
+    height: 50vh;
+    margin-top: -20vh;
   }
 `;
 
@@ -56,14 +71,16 @@ const ContactPageHeaderWrapper = styled.div`
     font-family: "Roboto", sans-serif;
     font-weight: 400;
   }
+
   // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  @media (max-width: 1920px) {
     h1 {
       font-size: 3.5em;
     }
   }
+
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     height: 7vh;
     h1 {
       font-size: 2.5em;
@@ -71,7 +88,7 @@ const ContactPageHeaderWrapper = styled.div`
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     height: 7vh;
     h1 {
       font-size: 2em;
@@ -79,7 +96,7 @@ const ContactPageHeaderWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     justify-content: center;
     h1 {
       font-size: 2em;
@@ -160,21 +177,22 @@ const ContactFormWrapper = styled.div`
   }
 
   // X-Large devices (large desktops, 1200px and up)
-  @media (max-width: 1400px) {
+  @media (max-width: 1920px) {
     height: 60vh;
+    width: 35vw;
     form {
       padding: 0;
     }
   }
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
-    width: 45vw;
-    height: 45vw;
+  @media (max-width: 1280px) {
+    width: 40vw;
+    height: 40vw;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     width: 45vw;
     height: 45vw;
     form {
@@ -190,7 +208,7 @@ const ContactFormWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     width: 100%;
     height: auto;
   }

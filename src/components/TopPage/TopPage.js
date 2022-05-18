@@ -33,24 +33,25 @@ const TopSectionWrapper = styled.div`
   font-size: 1.2rem;
   align-items: center;
 
-  // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
+  // Desktops
+  @media (max-width: 1920px) {
     font-size: 1.6rem;
     margin: 15vh 0;
   }
 
-  // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  // Laptops
+  @media (max-width: 1280px) {
     margin-bottom: 10vh;
   }
 
-  // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
-    margin-bottom: 12vh;
+  // Tablets
+  @media (max-width: 900px) {
+    margin-bottom: 20vh;
+    height: auto;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     height: 80vh;
     width: 80%;
     display: flex;
@@ -72,12 +73,13 @@ const TopPageLeft = styled.div`
   align-items: flex-start;
   margin-right: 5vw;
 
-  // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
-    margin-right: 4vw;
+  // Tablets
+  @media (max-width: 900px) {
+    margin-right: 3vw;
   }
+
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     max-width: 100%;
     max-height: 60vh;
     flex-direction: column;
@@ -94,33 +96,38 @@ const TopPageRight = styled.div`
   align-self: center;
   margin-left: 5vw;
 
-  // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  // Laptops
+  @media (max-width: 1280px) {
     height: auto;
     padding-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     height: auto;
     padding-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 4vw;
+    margin-bottom: 0;
   }
-
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     max-width: 40vw;
     max-height: 40vw;
     justify-content: flex-start;
     align-self: center;
     align-items: center;
     margin: 5vh auto;
+  }
+
+  // tablet
+  @media (max-width: 900px) {
+    margin-top: 10vh;
+    justify-self: center;
   }
 `;
 
@@ -130,16 +137,19 @@ const Header = styled.h1`
   margin: 0.2em 0;
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  @media (max-width: 1920px) {
     font-size: 2.2em;
   }
-
+  // laptops
+  @media (max-width: 1280px) {
+    font-size: 2em;
+  }
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
-    font-size: 1.8em;
+  @media (max-width: 900px) {
+    font-size: 1.6em;
   }
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     font-size: 2.3rem;
   }
 `;
@@ -151,17 +161,17 @@ const NameHeader = styled(Header)`
   font-size: 2.9em;
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1200px) {
+  @media (max-width: 1920px) {
     font-size: 2.5em;
   }
 
   // Medium devices (tablets, 768px and up)
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     font-size: 2em;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     font-size: 2.1em;
   }
 `;
@@ -184,7 +194,7 @@ const LearnMoreBtn = styled.button`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 576px) {
+  @media (max-width: 500px) {
     visibility: hidden;
   }
 `;
@@ -249,7 +259,7 @@ const TopPage = () => {
           variants={profilePicAnimate}
         >
           <TopPageRight>
-            <ProfilePic style={{ minWidth: "6em", width: "16em" }} />
+            <ProfilePic style={{ minWidth: "6em", width: "14em" }} />
           </TopPageRight>
         </motion.div>
       </TopSectionWrapper>
