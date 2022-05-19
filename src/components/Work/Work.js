@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import spoilistPic from "../../img/spoilist.svg";
@@ -13,19 +13,29 @@ import {
   ProjectDescriptionOverlay,
 } from "./style.js";
 
-const workProjectsAnimation = {
-  hidden: { opacity: 0 },
-  visible: {
-    y: [75, 0],
-    opacity: 1,
-  },
-};
-
 const Work = () => {
   let spoilistUrl = "https://butterysoft.github.io/SpoilistOfficialPage/";
   let quickRUrl = "https://www.youtube.com/watch?v=7HeWyDv62aY";
   let pocketDexUrl = "https://pocketdex-a45b8.web.app/";
   let movieAppUrl = "https://reactoads-movie-app-7c45e.web.app/";
+
+  // animation for desktop or mobile
+  const isLarge = useMediaQuery("(min-width: 1280px)");
+
+  const workProjectsAnimation = isLarge
+    ? {
+        hidden: { opacity: 0 },
+        visible: {
+          y: [75, 0],
+          opacity: 1,
+        },
+      }
+    : {
+        hidden: { opacity: 0.6 },
+        visible: {
+          opacity: 1,
+        },
+      };
 
   // in view animation
   const controls = useAnimation();
@@ -40,6 +50,25 @@ const Work = () => {
     }
   }, [controls, inView]);
 
+  // custom function for setting media query animations
+  function useMediaQuery(query) {
+    const [matches, setMatches] = useState(false);
+
+    useEffect(() => {
+      const media = window.matchMedia(query);
+      if (media.matches !== matches) {
+        setMatches(media.matches);
+      }
+      const listener = () => {
+        setMatches(media.matches);
+      };
+      media.addListener(listener);
+      return () => media.removeListener(listener);
+    }, [matches, query]);
+
+    return matches;
+  }
+
   return (
     <WorkWrapper id="work">
       <WorkHeaderWrapper>
@@ -48,7 +77,6 @@ const Work = () => {
       <WorkProjectsWrapper>
         <motion.div
           ref={ref}
-          initial="hidden"
           animate={controls}
           variants={workProjectsAnimation}
           transition={{ duration: 0.5 }}
@@ -70,7 +98,6 @@ const Work = () => {
 
         <motion.div
           ref={ref}
-          initial="hidden"
           animate={controls}
           variants={workProjectsAnimation}
           transition={{ duration: 0.75 }}
@@ -91,7 +118,6 @@ const Work = () => {
 
         <motion.div
           ref={ref}
-          initial="hidden"
           animate={controls}
           variants={workProjectsAnimation}
           transition={{ duration: 1 }}
@@ -112,7 +138,6 @@ const Work = () => {
 
         <motion.div
           ref={ref}
-          initial="hidden"
           animate={controls}
           variants={workProjectsAnimation}
           transition={{ duration: 1.25 }}

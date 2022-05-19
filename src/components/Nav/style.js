@@ -9,11 +9,10 @@ export const NavWrapper = styled.div`
   height: 70px;
   padding-left: 50px;
   padding-right: 50px;
-  z-index: 1;
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 100;
+  z-index: 100 !important;
 
   a:hover {
     color: rgba(90, 113, 158, 1);
