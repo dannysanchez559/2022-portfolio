@@ -32,9 +32,9 @@ export const LeftSideWrapper = styled.div`
   }
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1280px) {
+  @media (max-width: 1500px) {
     img {
-      width: 26em;
+      width: 29em;
     }
   }
 
@@ -82,7 +82,7 @@ export const RightSideWrapper = styled.div`
   }
 
   // Large devices (desktops, 992px and up)
-  @media (max-width: 1280px) {
+  @media (max-width: 1500px) {
     height: 60vh;
   }
 
@@ -169,7 +169,7 @@ export const AboutContentWrapper = styled.div`
   }
 
   // X-Large devices (large desktops, 1200px and up)
-  @media (max-width: 1280px) {
+  @media (max-width: 1500px) {
     p {
       font-size: 1.4rem;
       margin-top: 20px;
