@@ -12,6 +12,11 @@ export const WorkWrapper = styled.div`
   margin: 0;
   background-image: url(${workBackground});
   background-repeat: repeat;
+
+  // small devices
+  @media (max-width: 500px) {
+    margin-top: 10vh;
+  }
 `;
 
 export const WorkHeaderWrapper = styled.div`
@@ -54,7 +59,7 @@ export const WorkHeaderWrapper = styled.div`
   @media (max-width: 500px) {
     height: 5vh;
     justify-content: center;
-    margin: 5px;
+    margin: 20px;
     h1 {
       font-size: 2em;
     }
