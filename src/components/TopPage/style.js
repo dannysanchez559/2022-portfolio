@@ -180,7 +180,6 @@ export const LearnMoreBtn = styled.button`
   border-radius: 10px;
   border: none;
   text-decoration: none;
-  z-index: 100;
 
   :hover {
     cursor: pointer;
@@ -189,6 +188,6 @@ export const LearnMoreBtn = styled.button`
 
   // Small devices (landscape phones, 350px and up)
   @media (max-width: 500px) {
-    /* visibility: hidden; */
+    visibility: hidden;
   }
 `;

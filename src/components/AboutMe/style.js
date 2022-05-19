@@ -12,6 +12,7 @@ export const AboutMeWrapper = styled.div`
   // Small devices (landscape phones, 350px and up)
   @media (max-width: 500px) {
     flex-direction: column-reverse;
+    padding-top: 10vh;
   }
 `;
 

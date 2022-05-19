@@ -16,6 +16,7 @@ export const WorkWrapper = styled.div`
   // small devices
   @media (max-width: 500px) {
     margin-top: 10vh;
+    padding-top: 10vh;
   }
 `;
 
@@ -59,7 +60,8 @@ export const WorkHeaderWrapper = styled.div`
   @media (max-width: 500px) {
     height: 5vh;
     justify-content: center;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     h1 {
       font-size: 2em;
     }
