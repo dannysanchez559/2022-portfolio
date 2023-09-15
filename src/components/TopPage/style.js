@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TopPageWrapper = styled.div`
   height: 100vh;
@@ -25,7 +25,7 @@ export const TopSectionWrapper = styled.div`
   justify-content: space-evenly;
   z-index: 1;
   margin: 7vh 0;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 1.2rem;
   align-items: center;
 
@@ -55,7 +55,7 @@ export const TopSectionWrapper = styled.div`
     justify-content: flex-end;
     z-index: 1;
     margin: 0;
-    font-family: "Oxygen", sans-serif;
+    font-family: 'Oxygen', sans-serif;
     font-size: 1.2rem;
   }
 `;
@@ -92,7 +92,8 @@ export const TopPageRight = styled.div`
 
   // Laptops
   @media (max-width: 1280px) {
-    height: auto;
+    max-width: 30vw;
+    height: 25vw;
     padding-top: 0;
     display: flex;
     justify-content: center;
@@ -110,12 +111,13 @@ export const TopPageRight = styled.div`
   }
   // Small devices (landscape phones, 350px and up)
   @media (max-width: 500px) {
-    max-width: 40vw;
-    max-height: 40vw;
+    width: 70vw;
+    height: auto;
+
     justify-content: flex-start;
     align-self: center;
     align-items: center;
-    margin: 5vh auto;
+    margin: 3vh auto;
   }
 
   // tablet
@@ -123,6 +125,11 @@ export const TopPageRight = styled.div`
     margin-top: 10vh;
     justify-self: center;
   }
+`;
+
+export const TopPortraitImg = styled.img`
+  max-width: 35vw;
+  max-height: 30vw;
 `;
 
 export const Header = styled.h1`
@@ -151,7 +158,7 @@ export const Header = styled.h1`
 export const NameHeader = styled(Header)`
   color: #6e85b2;
   font-weight: bolder;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.9em;
 
   // Large devices (desktops, 992px and up)
@@ -174,7 +181,7 @@ export const LearnMoreBtn = styled.button`
   width: 200px;
   height: 50px;
   background-color: #6e85b2;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
   color: white;
   border-radius: 10px;

@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { default as AboutMePicture } from "../../img/aboutMePicture.svg";
+import React, { useEffect } from 'react';
+import aboutMePicture from '../../img/aboutMePicture.png';
 import {
   AboutContentWrapper,
   AboutHeaderWrapper,
   AboutMeWrapper,
   LeftSideWrapper,
   RightSideWrapper,
-} from "./style.js";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+} from './style.js';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const aboutPicAnimation = {
   visible: { opacity: 1, transition: { duration: 2 } },
@@ -31,10 +31,10 @@ const AboutMe = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
+      controls.start('visible');
     }
     if (!inView) {
-      controls.start("hidden");
+      controls.start('hidden');
     }
   }, [controls, inView]);
 
@@ -47,7 +47,7 @@ const AboutMe = () => {
           animate={controls}
           variants={aboutPicAnimation}
         >
-          <img src={AboutMePicture} />
+          <img src={aboutMePicture} alt="scooter and laptop" />
         </motion.div>
       </LeftSideWrapper>
       <RightSideWrapper>
@@ -62,12 +62,12 @@ const AboutMe = () => {
           </AboutHeaderWrapper>
           <AboutContentWrapper>
             <p>
-              I focus on the latest and most widely supported Front End mobile
-              technologies such as React JS and React Native. I am also
-              passionate for clean and elegant UI Design. You can either find me
-              working on a coding project, enjoying a nice trail outdoors on my
-              Electric Scooter, or enjoying an ice cold Craft Beer on my free
-              time. 😁 🛴 🍺
+              I focus on the latest and most widely supported mobile
+              technologies such as Swift and React Native. I am also passionate
+              for clean and elegant UI Design. You can either find me working on
+              a coding project, enjoying a nice trail outdoors on my Electric
+              Scooter, or enjoying an ice cold Craft Beer on my free time. 😁 🛴
+              🍺
             </p>
           </AboutContentWrapper>
         </motion.div>

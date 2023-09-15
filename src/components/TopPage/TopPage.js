@@ -1,16 +1,17 @@
-import React from "react";
-import { Link } from "react-scroll";
-import { ReactComponent as ProfilePic } from "../../img/profilePic.svg";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Link } from 'react-scroll';
+import profilePic from '../../img/profilePic.png';
+import { motion } from 'framer-motion';
 import {
   TopPageWrapper,
   TopSectionWrapper,
   TopPageLeft,
   TopPageRight,
+  TopPortraitImg,
   NameHeader,
   Header,
   LearnMoreBtn,
-} from "./style";
+} from './style';
 
 const profilePicAnimate = {
   visible: { opacity: 1, transition: { duration: 2 } },
@@ -41,7 +42,7 @@ const TopPage = () => {
           <motion.div
             initial="hidden"
             variants={topLeftAnimate}
-            animate={"visible"}
+            animate={'visible'}
             transition={{ duration: 0.75, delay: 1.5 }}
           >
             <p>Hello, my name is </p>
@@ -50,7 +51,7 @@ const TopPage = () => {
           <motion.div
             initial="hidden"
             variants={topLeftAnimate}
-            animate={"visible"}
+            animate={'visible'}
             transition={{ duration: 1.5, delay: 1.5 }}
           >
             <NameHeader>Daniel Sanchez.</NameHeader>
@@ -59,10 +60,10 @@ const TopPage = () => {
           <motion.div
             initial="hidden"
             variants={topLeftAnimate}
-            animate={"visible"}
+            animate={'visible'}
             transition={{ duration: 2, delay: 1.5 }}
           >
-            <Header>I create things for the Web.</Header>
+            <Header>I create software for phones and the web.</Header>
           </motion.div>
         </TopPageLeft>
 
@@ -72,7 +73,7 @@ const TopPage = () => {
           variants={profilePicAnimate}
         >
           <TopPageRight>
-            <ProfilePic style={{ minWidth: "6em", width: "14em" }} />
+            <TopPortraitImg src={profilePic} alt="portrait" />
           </TopPageRight>
         </motion.div>
       </TopSectionWrapper>
@@ -83,14 +84,14 @@ const TopPage = () => {
         smooth={true}
         duration={400}
         style={{
-          padding: "10px 42px",
+          padding: '10px 42px',
           zIndex: 100,
         }}
       >
         <motion.div
           initial="hidden"
           variants={buttonAnimate}
-          animate={"visible"}
+          animate={'visible'}
           transition={{ duration: 1.2, delay: 3.5 }}
         >
           <LearnMoreBtn>Learn More</LearnMoreBtn>
