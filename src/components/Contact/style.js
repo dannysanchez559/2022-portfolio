@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import contactMeBackground from "../../img/contactMeBackground.svg";
+import styled from 'styled-components';
+import contactMeBackground from '../../img/contactMeBackground.png';
 
 export const ContactPageWrapper = styled.div`
   box-sizing: border-box;
@@ -19,7 +19,7 @@ export const ContactPageWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     background: none;
     margin-top: 10vh;
   }
@@ -48,7 +48,7 @@ export const ContactPageRightSideWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     justify-content: center;
     width: 90%;
     height: 60vh;
@@ -63,7 +63,7 @@ export const ContactPageHeaderWrapper = styled.div`
   width: 100%;
   h1 {
     font-size: 3em;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
 
@@ -91,7 +91,7 @@ export const ContactPageHeaderWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     justify-content: center;
     h1 {
       font-size: 2em;
@@ -124,7 +124,7 @@ export const ContactFormWrapper = styled.div`
       padding: 5px;
       width: 80%;
       font-size: 1.3rem;
-      font-family: "Raleway", serif;
+      font-family: 'Raleway', serif;
       font-style: normal;
       font-weight: 400;
       line-height: 35px;
@@ -155,7 +155,7 @@ export const ContactFormWrapper = styled.div`
       background: rgba(110, 133, 178, 0.85);
       border: none;
       border-radius: 10px;
-      font-family: "Raleway";
+      font-family: 'Raleway';
       font-style: normal;
       font-weight: 500;
       font-size: 1.2em;
@@ -203,7 +203,7 @@ export const ContactFormWrapper = styled.div`
   }
 
   // small devices (tablets, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     width: 90vw;
     height: 40vh;
     padding: 10px;

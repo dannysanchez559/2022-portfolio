@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import workBackground from "../../img/axiom-pattern.png";
+import styled from 'styled-components';
+import workBackground from '../../img/axiom-pattern.png';
 
 export const WorkWrapper = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ export const WorkHeaderWrapper = styled.div`
   margin: 10vh 5vw;
   h1 {
     font-size: 3em;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
 
@@ -126,12 +126,13 @@ export const ProjectDescriptionOverlay = styled.div`
   h3 {
     margin: 0;
     font-size: 1.4em;
-    font-family: "Roboto", serif;
+    font-family: 'Roboto', serif;
   }
 
   p {
     margin: 10px;
-    font-family: "Raleway", serif;
+    font-family: 'Raleway', serif;
+    font-size: 1.1em;
   }
 
   // Medium devices (tablets, 768px and up)

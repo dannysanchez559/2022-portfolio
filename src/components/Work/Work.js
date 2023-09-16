@@ -1,26 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import spoilistPic from "../../img/spoilist.svg";
-import quickRPic from "../../img/quickR.svg";
-import pocketDexPic from "../../img/pocketDex.svg";
-import movieAppPic from "../../img/movieApp.svg";
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import vertigePic from '../../img/Vertige.svg';
+import spoilistPic from '../../img/spoilist.svg';
+import quickRPic from '../../img/quickR.svg';
+import pocketDexPic from '../../img/pocketDex.svg';
+import movieAppPic from '../../img/movieApp.svg';
 import {
   WorkWrapper,
   WorkHeaderWrapper,
   WorkProjectsWrapper,
   ProjectContainer,
   ProjectDescriptionOverlay,
-} from "./style.js";
+} from './style.js';
 
 const Work = () => {
-  let spoilistUrl = "https://butterysoft.github.io/SpoilistOfficialPage/";
-  let quickRUrl = "https://www.youtube.com/watch?v=7HeWyDv62aY";
-  let pocketDexUrl = "https://pocketdex-a45b8.web.app/";
-  let movieAppUrl = "https://reactoads-movie-app-7c45e.web.app/";
+  let vertigeUrl = 'https://apps.apple.com/us/app/vertige/id1623476042';
+  let spoilistUrl = 'https://butterysoft.github.io/SpoilistOfficialPage/';
+  let quickRUrl = 'https://butterysoft.github.io/QuickR-Landing-Page/';
+  let pocketDexUrl = 'https://pocketdex-a45b8.web.app/';
+  let movieAppUrl = 'https://reactoads-movie-app-7c45e.web.app/';
 
   // animation for desktop or mobile
-  const isLarge = useMediaQuery("(min-width: 1280px)");
+  const isLarge = useMediaQuery('(min-width: 1280px)');
 
   const workProjectsAnimation = isLarge
     ? {
@@ -43,10 +45,10 @@ const Work = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
+      controls.start('visible');
     }
     if (!inView) {
-      controls.start("hidden");
+      controls.start('hidden');
     }
   }, [controls, inView]);
 
@@ -82,14 +84,35 @@ const Work = () => {
           transition={{ duration: 0.5 }}
         >
           <ProjectContainer>
+            <img src={vertigePic} alt="vertige ios app" />
+            <ProjectDescriptionOverlay>
+              <a href={vertigeUrl} target="_blank" rel="noreferrer">
+                <h3>Vertige</h3>
+                <p>
+                  An iOS application that allows users to track their vertigo
+                  symptoms and triggers! Uses Swift, UIKit, Firebase, REST APIs,
+                  iOS Frameworks.
+                </p>
+              </a>
+            </ProjectDescriptionOverlay>
+          </ProjectContainer>
+        </motion.div>
+
+        <motion.div
+          ref={ref}
+          animate={controls}
+          variants={workProjectsAnimation}
+          transition={{ duration: 0.5 }}
+        >
+          <ProjectContainer>
             <img src={spoilistPic} alt="spoilist ios app" />
             <ProjectDescriptionOverlay>
               <a href={spoilistUrl} target="_blank" rel="noreferrer">
                 <h3>Spoilist</h3>
                 <p>
-                  A native iOS application that helps prevent food spoilage. Add
-                  alerts for food items to remind you to consume them before
-                  spoilage!
+                  A native iOS application that helps prevent food spoilage.
+                  Reminds you to consume food items before spoilage! Uses Swift,
+                  Swift Frameworks, Realm DB.
                 </p>
               </a>
             </ProjectDescriptionOverlay>
@@ -108,8 +131,9 @@ const Work = () => {
               <a href={quickRUrl} target="_blank" rel="noreferrer">
                 <h3>QuickR</h3>
                 <p>
-                  A mobile application for both Android and iOS that allows you
-                  to manage, organize, and create QR codes!
+                  A React Native iOS app that allows you to manage, organize,
+                  and create QR codes! Uses React Native, Redux, React
+                  Frameworks, REST APIs
                 </p>
               </a>
             </ProjectDescriptionOverlay>
@@ -129,7 +153,8 @@ const Work = () => {
                 <h3>PocketDex</h3>
                 <p>
                   A Mobile friendly Web based application that allows users to
-                  look up any pokemon, and their stats.
+                  look up any pokemon, and their stats. Uses React, React
+                  Frameworks, REST APIs
                 </p>
               </a>
             </ProjectDescriptionOverlay>
@@ -149,7 +174,8 @@ const Work = () => {
                 <h3>Reactoads MovieApp</h3>
                 <p>
                   A Mobile friendly Web based application that allows users to
-                  look up movie information!
+                  look up movie information! Uses React, React Frameworks, REST
+                  APIs
                 </p>
               </a>
             </ProjectDescriptionOverlay>

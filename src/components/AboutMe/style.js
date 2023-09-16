@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AboutMeWrapper = styled.div`
   box-sizing: border-box;
@@ -10,7 +10,7 @@ export const AboutMeWrapper = styled.div`
   z-index: 1;
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     flex-direction: column-reverse;
     padding-top: 10vh;
   }
@@ -47,7 +47,7 @@ export const LeftSideWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     height: auto;
     width: 80%;
     display: flex;
@@ -55,14 +55,14 @@ export const LeftSideWrapper = styled.div`
     justify-content: center;
     img {
       width: 20em;
-      margin-top: 20px;
+      margin-top: 40px;
     }
   }
 `;
 
 export const RightSideWrapper = styled.div`
   width: 40vw;
-  height: 75vh;
+  height: 60vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@ export const RightSideWrapper = styled.div`
   // XX-Large devices (larger desktops, 1400px and up)
   @media (max-width: 1920px) {
     width: 35vw;
-    height: 70vh;
+    height: 63vh;
   }
 
   // Large devices (desktops, 992px and up)
@@ -89,12 +89,13 @@ export const RightSideWrapper = styled.div`
 
   // Medium devices (tablets, 768px and up)
   @media (max-width: 900px) {
-    width: 45vw;
-    height: 35vh;
+    width: 35vw;
+    height: 45vh;
+    box-sizing: content-box;
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     width: 90%;
     height: auto;
     flex-direction: column;
@@ -105,14 +106,14 @@ export const RightSideWrapper = styled.div`
 
 export const AboutHeaderWrapper = styled.div`
   text-align: right;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: right;
   width: 100%;
   h1 {
     font-size: 3em;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
 
@@ -140,7 +141,7 @@ export const AboutHeaderWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     text-align: center;
     height: 10vh;
     justify-content: center;
@@ -156,7 +157,7 @@ export const AboutContentWrapper = styled.div`
   p {
     font-size: 1.6rem;
     text-align: right;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 125%;
     font-weight: 400;
   }
@@ -185,7 +186,7 @@ export const AboutContentWrapper = styled.div`
   }
 
   // Small devices (landscape phones, 350px and up)
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     max-width: 100%;
     p {
       font-size: 1.3rem;
