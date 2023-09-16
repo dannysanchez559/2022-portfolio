@@ -104,7 +104,7 @@ export const ProjectDescriptionOverlay = styled.div`
   align-items: center;
   box-sizing: border-box;
   width: 325px;
-  height: 175px;
+  height: 210px;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
