@@ -132,7 +132,7 @@ export const ProjectDescriptionOverlay = styled.div`
   p {
     margin: 10px;
     font-family: 'Raleway', serif;
-    font-size: 1.1em;
+    font-size: 0.95em;
   }
 
   // Medium devices (tablets, 768px and up)

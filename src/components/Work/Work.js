@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import vertigePic from '../../img/Vertige.svg';
+import flowPic from '../../img/flow-img.svg';
 import spoilistPic from '../../img/spoilist.svg';
 import quickRPic from '../../img/quickR.svg';
 import pocketDexPic from '../../img/pocketDex.svg';
@@ -15,7 +15,7 @@ import {
 } from './style.js';
 
 const Work = () => {
-  let vertigeUrl = 'https://apps.apple.com/us/app/vertige/id1623476042';
+  let flowUrl = 'https://www.flowbudgetapp.com';
   let spoilistUrl = 'https://butterysoft.github.io/SpoilistOfficialPage/';
   let quickRUrl = 'https://butterysoft.github.io/QuickR-Landing-Page/';
   let pocketDexUrl = 'https://pocketdex-a45b8.web.app/';
@@ -84,14 +84,13 @@ const Work = () => {
           transition={{ duration: 0.5 }}
         >
           <ProjectContainer>
-            <img src={vertigePic} alt="vertige ios app" />
+            <img src={flowPic} alt="flow ios budgeting app" />
             <ProjectDescriptionOverlay>
-              <a href={vertigeUrl} target="_blank" rel="noreferrer">
-                <h3>Vertige</h3>
+              <a href={flowUrl} target="_blank" rel="noreferrer">
+                <h3>Flow</h3>
                 <p>
-                  An iOS application that allows users to track their vertigo
-                  symptoms and triggers! Uses Swift, UIKit, Firebase, REST APIs,
-                  iOS Frameworks.
+                  An iOS budgeting app with AI-powered financial insights. Uses
+                  Swift, UIKit, Firebase, and Gemini API.
                 </p>
               </a>
             </ProjectDescriptionOverlay>
