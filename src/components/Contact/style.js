@@ -214,3 +214,104 @@ export const ContactFormWrapper = styled.div`
 export const EmailSentMessage = styled.div`
   visibility: hidden;
 `;
+
+export const ContactFooterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  margin-top: 0.5em;
+  padding: 10px 0;
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (max-width: 1920px) {
+    width: 35vw;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 1280px) {
+    width: 40vw;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 900px) {
+    width: 45vw;
+  }
+
+  // small devices (tablets, 350px and up)
+  @media (max-width: 750px) {
+    width: 90vw;
+    margin-top: 0.3em;
+  }
+`;
+
+export const ContactFooterText = styled.p`
+  font-family: 'Raleway', serif;
+  font-size: 1rem;
+  color: #8a8686;
+  margin: 0 0 15px 0;
+  text-align: center;
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
+
+  // small devices (tablets, 350px and up)
+  @media (max-width: 750px) {
+    font-size: 0.85rem;
+  }
+`;
+
+export const ContactFooterLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+`;
+
+export const ContactFooterLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`;
+
+export const ContactFooterIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 900px) {
+    width: 22px;
+    height: 22px;
+  }
+
+  // small devices (tablets, 350px and up)
+  @media (max-width: 750px) {
+    width: 20px;
+    height: 20px;
+  }
+`;
